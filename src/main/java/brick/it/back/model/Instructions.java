@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,9 +14,14 @@ public class Instructions {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String username;
-	private String name;
-	private String email;
+	private String description;
+	private String title;
 	
+	@Lob
+    private byte[] instructpdfzip; 
+	
+	@Lob
+    private byte[] iconImage; 
 	
 	public Long getId() {
 		return id;
@@ -29,17 +35,37 @@ public class Instructions {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getName() {
-		return name;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public String getEmail() {
-		return email;
+	
+	public String getTitle() {
+		return title;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public byte[] getInstructpdfzip() {
+		return instructpdfzip;
+	}
+	
+	public void setInstructpdfzip(byte[] instructpdfzip) {
+		this.instructpdfzip = instructpdfzip;
+	}
+	
+	public byte[] getIconImage() {
+		return iconImage;
+	}
+	
+	public void setIconImage(byte[] iconImage) {
+		this.iconImage = iconImage;
 	}
 	
 	

@@ -46,8 +46,10 @@ public class InstructionsController {
 				.map(
 						Instruction -> {
 							Instruction.setUsername(newUser.getUsername());
-							Instruction.setName(newUser.getName());
-							Instruction.setEmail(newUser.getEmail());
+							Instruction.setDescription(newUser.getDescription());
+							Instruction.setTitle(newUser.getTitle());
+							Instruction.setInstructpdfzip(newUser.getInstructpdfzip());
+							Instruction.setIconImage(newUser.getIconImage());
 			return userRepository.save(Instruction);
 			}).orElseThrow(()->new InstructionNotFoundException(id));
 	}
