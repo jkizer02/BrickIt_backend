@@ -17,8 +17,7 @@ public class Instructions {
 	private String description;
 	private String title;
 	
-	@Lob
-    private byte[] instructpdfzip; 
+	private Long instructpdfzipid; // PDF zip file containing the instructions 
 	
 	@Lob
     private byte[] iconImage; 
@@ -52,12 +51,12 @@ public class Instructions {
 		this.title = title;
 	}
 	
-	public byte[] getInstructpdfzip() {
-		return instructpdfzip;
+	public Long getInstructpdfzipid() {
+		return instructpdfzipid;
 	}
-	
-	public void setInstructpdfzip(byte[] instructpdfzip) {
-		this.instructpdfzip = instructpdfzip;
+
+	public void setInstructpdfzipid(Long instructpdfzipid) {
+		this.instructpdfzipid = instructpdfzipid;
 	}
 	
 	public byte[] getIconImage() {

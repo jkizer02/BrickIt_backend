@@ -48,7 +48,7 @@ public class InstructionsController {
 							Instruction.setUsername(newUser.getUsername());
 							Instruction.setDescription(newUser.getDescription());
 							Instruction.setTitle(newUser.getTitle());
-							Instruction.setInstructpdfzip(newUser.getInstructpdfzip());
+							Instruction.setInstructpdfzipid(newUser.getInstructpdfzipid());
 							Instruction.setIconImage(newUser.getIconImage());
 			return userRepository.save(Instruction);
 			}).orElseThrow(()->new InstructionNotFoundException(id));
