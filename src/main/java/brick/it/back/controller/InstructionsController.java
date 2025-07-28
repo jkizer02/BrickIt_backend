@@ -14,6 +14,7 @@ import brick.it.back.model.Instructions;
 import brick.it.back.repository.InstructionsRepository;
 
 @RestController
+@CrossOrigin("http://localhost:5173")
 public class InstructionsController {
 
 	@Autowired
@@ -27,7 +28,7 @@ public class InstructionsController {
 	}
 
 	// Stub: Returns an empty list (Test should fail if expecting actual users)
-	@GetMapping("/instructions")
+	@GetMapping("/models")
 	List<Instructions> getAllInstructions() {
 		return userRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
